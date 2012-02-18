@@ -1,0 +1,11 @@
+{
+  "name": "logi-tpl"
+, "version": "0.0.1"
+, "description": "JS template engine for Node.js. Along with the classic template features, it supports subtemplates inclusion, asynchronous fragments and direct function calls."
+, "tags": ["template-engine", "node"]
+, "author": "Marian Kostadinov <manchokapitancho@gmail.com>"
+, "repository": { "type": "git"
+  ,  "url": "https://github.com/kapitancho/logi-tpl.git"
+  }, 
+  "main": "./logi-tpl.js"
+}
