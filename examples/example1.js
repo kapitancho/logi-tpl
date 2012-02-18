@@ -19,4 +19,4 @@ exports.runExample = function() {
 	
 	console.log ("Teamplte rendering is in progress...");
 
-}
+};

@@ -4,6 +4,9 @@ exports.runExample = function() {
 			
 	return qtpl.applyToFileTemplate (__dirname + '/tpl/example2.html', {	
 		site_title : 'example1 site',
+		sync_demo : function (param1, param2) {
+			return "param1 - param2 = " + (param1 - param2);
+		},
 		async_demo : function (callback) {
 			//An async operation may go here. It should finally invoke: 
 			callback (null, "ASYNC DEMO RESULT");
@@ -26,4 +29,4 @@ exports.runExample = function() {
 	
 	console.log ("Teamplte rendering is in progress...");
 	
-}
+};
