@@ -61,15 +61,21 @@ Output:
 Instead of providing a file resource, you can
 directly pass the template as a string and call
 
-    logiTpl.applyToStringTemplate (templateCode, params, function (error, generatedContent) { /* ... */ }, templateRoot);
+    logiTpl.applyToStringTemplate (templateCode, params, function (error, generatedContent) {
+        /* ... */
+    }, templateRoot);
 
 If you need to compile a template for a later use, you can do it easily: 
 
-    logiTpl.compileTemplateCode (templateCode, function (error, compilationResult) { /* ... */ }); 
+    logiTpl.compileTemplateCode (templateCode, function (error, compilationResult) {
+        /* ... */
+    }); 
 
 Then use:
 
-    logiTpl.applyToCompiledTemplate (compiledScript, params, function (error, generatedContent) { /* ... */ }, templateRoot);
+    logiTpl.applyToCompiledTemplate (compiledScript, params, function (error, generatedContent) {
+        /* ... */
+    }, templateRoot);
 
 The last argument 'templateRoot' can be used when subtemplates are included. When applyToFileTemplate is used, 
 the templateRoot is automatically exctracted from the template file name. 
@@ -91,16 +97,19 @@ The engine invokes it with a callback parameter and the function should
 invoke this "callback" with the content passed as an argument.
 Check example2.js for more details.  
 
-Subtemplates are included by using:		
+Subtemplates are included by using:
+		
     <%~ "sub/template.html" %>   
 
 By default, all the parameters are passed to the subtemplate.
 If you need to pass different parameter set, you can use:
+
     <%~ "sub/template.html", { a : 3, b : 4 } %>   
  
 ## Planned features
 
-The following things are planned for future releases:
+#### The following things are planned for future releases:
+
 * Improved parsing
 * Better parse error details 
 * Custom compiler options
